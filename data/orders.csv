@@ -1,0 +1,6 @@
+order_id,customer_id,customer_name,product,category,quantity,price,order_date
+1001,C001,Priya,Laptop,Electronics,1,55000,2026-01-05
+1002,C002,Sanjay,Headphones,Electronics,2,2500,2026-01-12
+1003,C003,Harini,Shoes,Fashion,1,3000,2026-02-03
+1004,C004,Divya,T-Shirt,Fashion,3,800,2026-02-15
+1005,C005,Karthik,Mobile,Electronics,1,22000,2026-03-08
