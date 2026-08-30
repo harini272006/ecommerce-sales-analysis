@@ -1,6 +1,501 @@
-order_id,customer_id,customer_name,product,category,quantity,price,order_date
-1001,C001,Priya,Laptop,Electronics,1,55000,2026-01-05
-1002,C002,Sanjay,Headphones,Electronics,2,2500,2026-01-12
-1003,C003,Harini,Shoes,Fashion,1,3000,2026-02-03
-1004,C004,Divya,T-Shirt,Fashion,3,800,2026-02-15
-1005,C005,Karthik,Mobile,Electronics,1,22000,2026-03-08
+order_id	customer_id	customer_name	product	category	quantity	price	order_date	region	payment_method	cost	revenue	profit
+O0001	C063	Harini	Smart Watch	Electronics	1	5000	2025-05-21	Coimbatore	Credit Card	3200	5000	1800
+O0002	C109	Arun	Smart Watch	Electronics	5	5000	2025-02-14	Chennai	UPI	3200	25000	9000
+O0003	C130	Swetha	Headphones	Electronics	2	2500	2025-04-30	Chennai	Net Banking	1500	5000	2000
+O0004	C057	Ajay	T-Shirt	Fashion	5	800	2025-08-03	Pondicherry	Net Banking	450	4000	1750
+O0005	C109	Arun	Shoes	Fashion	1	3000	2025-03-23	Trichy	Debit Card	1900	3000	1100
+O0006	C027	Rahul	Keyboard	Electronics	2	1800	2025-06-22	Bengaluru	Cash on Delivery	1100	3600	1400
+O0007	C068	Meena	Smart Watch	Electronics	3	5000	2025-06-26	Chennai	Cash on Delivery	3200	15000	5400
+O0008	C021	Priya	Water Bottle	Home & Kitchen	1	700	2025-07-13	Madurai	Net Banking	350	700	350
+O0009	C018	Deepa	Saree	Fashion	5	2500	2025-04-09	Chennai	Credit Card	1600	12500	4500
+O0010	C026	Anitha	Hoodie	Fashion	1	2200	2025-04-30	Salem	Debit Card	1400	2200	800
+O0011	C095	Suresh	Cookware Set	Home & Kitchen	3	2800	2025-03-25	Trichy	Credit Card	1800	8400	3000
+O0012	C044	Divya	Shoes	Fashion	1	3000	2025-11-08	Coimbatore	Credit Card	1900	3000	1100
+O0013	C143	Harini	Cookware Set	Home & Kitchen	4	2800	2025-05-19	Coimbatore	Debit Card	1800	11200	4000
+O0014	C081	Priya	Mobile	Electronics	2	22000	2025-01-17	Salem	Debit Card	17000	44000	10000
+O0015	C081	Priya	Headphones	Electronics	2	2500	2025-10-18	Coimbatore	Cash on Delivery	1500	5000	2000
+O0016	C068	Meena	Coffee Maker	Home & Kitchen	4	4500	2025-03-15	Hyderabad	Credit Card	2900	18000	6400
+O0017	C150	Swetha	Water Bottle	Home & Kitchen	5	700	2025-05-15	Salem	Net Banking	350	3500	1750
+O0018	C036	Pooja	Coffee Maker	Home & Kitchen	3	4500	2025-04-23	Pondicherry	UPI	2900	13500	4800
+O0019	C041	Priya	Mobile	Electronics	1	22000	2025-03-20	Salem	Net Banking	17000	22000	5000
+O0020	C120	Keerthana	Headphones	Electronics	4	2500	2025-07-15	Madurai	Net Banking	1500	10000	4000
+O0021	C138	Deepa	Laptop	Electronics	1	55000	2025-12-16	Madurai	Debit Card	42000	55000	13000
+O0022	C041	Priya	Smart Watch	Electronics	3	5000	2025-08-11	Pondicherry	UPI	3200	15000	5400
+O0023	C130	Swetha	Shoes	Fashion	5	3000	2025-04-02	Bengaluru	Debit Card	1900	15000	5500
+O0024	C040	Keerthana	Desk Lamp	Home & Kitchen	5	1000	2025-04-12	Trichy	Credit Card	600	5000	2000
+O0025	C083	Harini	Water Bottle	Home & Kitchen	5	700	2025-01-01	Pondicherry	UPI	350	3500	1750
+O0026	C062	Sanjay	Smart Watch	Electronics	3	5000	2025-06-07	Chennai	Credit Card	3200	15000	5400
+O0027	C018	Deepa	Headphones	Electronics	1	2500	2025-09-06	Hyderabad	Credit Card	1500	2500	1000
+O0028	C068	Meena	Bedsheet	Home & Kitchen	5	1200	2025-03-26	Salem	Credit Card	700	6000	2500
+O0029	C103	Harini	Water Bottle	Home & Kitchen	2	700	2025-06-09	Trichy	Cash on Delivery	350	1400	700
+O0030	C064	Divya	Desk Lamp	Home & Kitchen	4	1000	2025-03-03	Coimbatore	UPI	600	4000	1600
+O0031	C142	Sanjay	Backpack	Fashion	1	1500	2025-10-29	Coimbatore	Net Banking	900	1500	600
+O0032	C016	Pooja	Jeans	Fashion	1	1800	2025-02-06	Coimbatore	UPI	1100	1800	700
+O0033	C132	Nisha	Mobile	Electronics	3	22000	2025-02-06	Coimbatore	Debit Card	17000	66000	15000
+O0034	C034	Kavya	Bedsheet	Home & Kitchen	2	1200	2025-10-04	Pondicherry	Credit Card	700	2400	1000
+O0035	C025	Karthik	Bedsheet	Home & Kitchen	4	1200	2025-04-08	Bengaluru	Cash on Delivery	700	4800	2000
+O0036	C120	Keerthana	Saree	Fashion	4	2500	2025-07-30	Chennai	UPI	1600	10000	3600
+O0037	C028	Meena	Mobile	Electronics	4	22000	2025-06-23	Coimbatore	Credit Card	17000	88000	20000
+O0038	C036	Pooja	T-Shirt	Fashion	5	800	2025-08-18	Salem	Credit Card	450	4000	1750
+O0039	C020	Keerthana	Shoes	Fashion	4	3000	2025-05-08	Pondicherry	Net Banking	1900	12000	4400
+O0040	C139	Manoj	Smart Watch	Electronics	1	5000	2025-11-30	Chennai	UPI	3200	5000	1800
+O0041	C125	Karthik	Jeans	Fashion	2	1800	2025-07-28	Pondicherry	Credit Card	1100	3600	1400
+O0042	C098	Deepa	Coffee Maker	Home & Kitchen	1	4500	2025-03-26	Chennai	Cash on Delivery	2900	4500	1600
+O0043	C109	Arun	Shoes	Fashion	4	3000	2025-05-27	Pondicherry	Credit Card	1900	12000	4400
+O0044	C015	Suresh	T-Shirt	Fashion	3	800	2025-04-22	Chennai	Debit Card	450	2400	1050
+O0045	C123	Harini	Mobile	Electronics	1	22000	2025-10-27	Hyderabad	UPI	17000	22000	5000
+O0046	C018	Deepa	Desk Lamp	Home & Kitchen	1	1000	2025-04-06	Bengaluru	Credit Card	600	1000	400
+O0047	C064	Divya	Coffee Maker	Home & Kitchen	1	4500	2025-10-19	Chennai	Net Banking	2900	4500	1600
+O0048	C150	Swetha	Headphones	Electronics	4	2500	2025-12-03	Trichy	Debit Card	1500	10000	4000
+O0049	C068	Meena	T-Shirt	Fashion	3	800	2025-05-03	Salem	Credit Card	450	2400	1050
+O0050	C019	Manoj	Hoodie	Fashion	4	2200	2025-06-11	Chennai	Cash on Delivery	1400	8800	3200
+O0051	C055	Suresh	Smart Watch	Electronics	1	5000	2025-10-03	Madurai	Credit Card	3200	5000	1800
+O0052	C095	Suresh	Saree	Fashion	1	2500	2025-05-06	Madurai	Credit Card	1600	2500	900
+O0053	C078	Deepa	Cookware Set	Home & Kitchen	5	2800	2025-12-27	Chennai	Net Banking	1800	14000	5000
+O0054	C068	Meena	Hoodie	Fashion	1	2200	2025-03-10	Bengaluru	UPI	1400	2200	800
+O0055	C073	Ravi	Water Bottle	Home & Kitchen	2	700	2025-05-20	Coimbatore	Debit Card	350	1400	700
+O0056	C126	Anitha	T-Shirt	Fashion	3	800	2025-09-16	Madurai	UPI	450	2400	1050
+O0057	C012	Nisha	Headphones	Electronics	4	2500	2025-05-22	Chennai	Debit Card	1500	10000	4000
+O0058	C114	Kavya	Keyboard	Electronics	3	1800	2025-03-24	Salem	Net Banking	1100	5400	2100
+O0059	C039	Manoj	Laptop	Electronics	1	55000	2025-02-08	Chennai	Debit Card	42000	55000	13000
+O0060	C033	Ravi	Water Bottle	Home & Kitchen	2	700	2025-08-09	Chennai	Debit Card	350	1400	700
+O0061	C054	Kavya	Saree	Fashion	1	2500	2025-07-03	Coimbatore	UPI	1600	2500	900
+O0062	C040	Keerthana	Saree	Fashion	5	2500	2025-07-28	Coimbatore	Credit Card	1600	12500	4500
+O0063	C046	Anitha	Mouse	Electronics	4	900	2025-01-13	Trichy	Cash on Delivery	500	3600	1600
+O0064	C028	Meena	Jeans	Fashion	3	1800	2025-03-23	Salem	UPI	1100	5400	2100
+O0065	C118	Deepa	Bedsheet	Home & Kitchen	2	1200	2025-04-13	Trichy	Debit Card	700	2400	1000
+O0066	C050	Swetha	Jeans	Fashion	2	1800	2025-01-13	Salem	Debit Card	1100	3600	1400
+O0067	C090	Swetha	Shoes	Fashion	1	3000	2025-05-23	Salem	Net Banking	1900	3000	1100
+O0068	C067	Rahul	Backpack	Fashion	1	1500	2025-03-01	Hyderabad	Net Banking	900	1500	600
+O0069	C112	Nisha	Shoes	Fashion	1	3000	2025-02-25	Trichy	Debit Card	1900	3000	1100
+O0070	C030	Swetha	Mixer Grinder	Home & Kitchen	5	3500	2025-09-19	Salem	Net Banking	2300	17500	6000
+O0071	C112	Nisha	T-Shirt	Fashion	3	800	2025-01-23	Chennai	Net Banking	450	2400	1050
+O0072	C111	Vijay	Water Bottle	Home & Kitchen	2	700	2025-07-06	Bengaluru	Debit Card	350	1400	700
+O0073	C130	Swetha	Backpack	Fashion	1	1500	2025-06-03	Madurai	Cash on Delivery	900	1500	600
+O0074	C076	Pooja	Backpack	Fashion	4	1500	2025-12-23	Hyderabad	Credit Card	900	6000	2400
+O0075	C045	Karthik	Mixer Grinder	Home & Kitchen	4	3500	2025-12-13	Madurai	Cash on Delivery	2300	14000	4800
+O0076	C074	Kavya	Water Bottle	Home & Kitchen	1	700	2025-06-05	Coimbatore	Cash on Delivery	350	700	350
+O0077	C114	Kavya	Backpack	Fashion	4	1500	2025-08-15	Coimbatore	Net Banking	900	6000	2400
+O0078	C022	Sanjay	Bedsheet	Home & Kitchen	2	1200	2025-12-04	Madurai	Net Banking	700	2400	1000
+O0079	C080	Keerthana	Backpack	Fashion	1	1500	2025-05-01	Coimbatore	Credit Card	900	1500	600
+O0080	C063	Harini	Keyboard	Electronics	1	1800	2025-01-24	Pondicherry	Net Banking	1100	1800	700
+O0081	C148	Meena	Headphones	Electronics	4	2500	2025-08-01	Coimbatore	Cash on Delivery	1500	10000	4000
+O0082	C038	Deepa	Bedsheet	Home & Kitchen	4	1200	2025-05-05	Chennai	UPI	700	4800	2000
+O0083	C133	Ravi	Mixer Grinder	Home & Kitchen	2	3500	2025-04-01	Pondicherry	UPI	2300	7000	2400
+O0084	C117	Ajay	Water Bottle	Home & Kitchen	2	700	2025-03-04	Hyderabad	Cash on Delivery	350	1400	700
+O0085	C082	Sanjay	Desk Lamp	Home & Kitchen	5	1000	2025-11-01	Pondicherry	Net Banking	600	5000	2000
+O0086	C115	Suresh	Desk Lamp	Home & Kitchen	4	1000	2025-10-08	Hyderabad	Cash on Delivery	600	4000	1600
+O0087	C071	Vijay	Cookware Set	Home & Kitchen	3	2800	2025-05-07	Pondicherry	Credit Card	1800	8400	3000
+O0088	C074	Kavya	Shoes	Fashion	4	3000	2025-02-09	Coimbatore	Debit Card	1900	12000	4400
+O0089	C021	Priya	Backpack	Fashion	3	1500	2025-10-04	Hyderabad	Credit Card	900	4500	1800
+O0090	C040	Keerthana	Jeans	Fashion	4	1800	2025-12-22	Coimbatore	UPI	1100	7200	2800
+O0091	C139	Manoj	Mixer Grinder	Home & Kitchen	4	3500	2025-06-19	Pondicherry	Cash on Delivery	2300	14000	4800
+O0092	C100	Keerthana	Mobile	Electronics	2	22000	2025-08-04	Chennai	Net Banking	17000	44000	10000
+O0093	C091	Vijay	Coffee Maker	Home & Kitchen	4	4500	2025-01-04	Madurai	Cash on Delivery	2900	18000	6400
+O0094	C057	Ajay	Mixer Grinder	Home & Kitchen	5	3500	2025-10-07	Pondicherry	Credit Card	2300	17500	6000
+O0095	C008	Meena	Shoes	Fashion	4	3000	2025-09-06	Salem	Debit Card	1900	12000	4400
+O0096	C033	Ravi	Coffee Maker	Home & Kitchen	2	4500	2025-08-28	Chennai	Cash on Delivery	2900	9000	3200
+O0097	C110	Swetha	Laptop	Electronics	1	55000	2025-11-26	Hyderabad	Cash on Delivery	42000	55000	13000
+O0098	C098	Deepa	Mouse	Electronics	1	900	2025-05-14	Trichy	Credit Card	500	900	400
+O0099	C098	Deepa	Cookware Set	Home & Kitchen	3	2800	2025-06-22	Madurai	Cash on Delivery	1800	8400	3000
+O0100	C005	Karthik	Shoes	Fashion	1	3000	2025-08-29	Chennai	Debit Card	1900	3000	1100
+O0101	C011	Vijay	Jeans	Fashion	1	1800	2025-11-30	Chennai	Credit Card	1100	1800	700
+O0102	C040	Keerthana	T-Shirt	Fashion	1	800	2025-11-15	Coimbatore	Credit Card	450	800	350
+O0103	C056	Pooja	Bedsheet	Home & Kitchen	1	1200	2025-10-16	Pondicherry	Debit Card	700	1200	500
+O0104	C030	Swetha	Saree	Fashion	2	2500	2025-11-07	Hyderabad	Debit Card	1600	5000	1800
+O0105	C080	Keerthana	Smart Watch	Electronics	5	5000	2025-01-14	Salem	Cash on Delivery	3200	25000	9000
+O0106	C063	Harini	T-Shirt	Fashion	1	800	2025-10-31	Bengaluru	Debit Card	450	800	350
+O0107	C089	Arun	Smart Watch	Electronics	5	5000	2025-01-22	Salem	Debit Card	3200	25000	9000
+O0108	C088	Meena	Headphones	Electronics	5	2500	2025-11-28	Chennai	Cash on Delivery	1500	12500	5000
+O0109	C093	Ravi	Bedsheet	Home & Kitchen	1	1200	2025-08-10	Pondicherry	Credit Card	700	1200	500
+O0110	C070	Swetha	Mixer Grinder	Home & Kitchen	2	3500	2025-09-25	Pondicherry	Cash on Delivery	2300	7000	2400
+O0111	C083	Harini	Mixer Grinder	Home & Kitchen	5	3500	2025-05-18	Coimbatore	UPI	2300	17500	6000
+O0112	C119	Manoj	Shoes	Fashion	4	3000	2025-05-05	Salem	Debit Card	1900	12000	4400
+O0113	C047	Rahul	Laptop	Electronics	4	55000	2025-06-16	Pondicherry	Credit Card	42000	220000	52000
+O0114	C072	Nisha	Saree	Fashion	3	2500	2025-06-24	Madurai	Net Banking	1600	7500	2700
+O0115	C022	Sanjay	Laptop	Electronics	5	55000	2025-04-08	Coimbatore	Cash on Delivery	42000	275000	65000
+O0116	C122	Sanjay	Bedsheet	Home & Kitchen	5	1200	2025-05-04	Pondicherry	Cash on Delivery	700	6000	2500
+O0117	C057	Ajay	Laptop	Electronics	1	55000	2025-05-31	Salem	Credit Card	42000	55000	13000
+O0118	C122	Sanjay	Hoodie	Fashion	5	2200	2025-07-08	Trichy	Cash on Delivery	1400	11000	4000
+O0119	C117	Ajay	Water Bottle	Home & Kitchen	3	700	2025-06-30	Madurai	Debit Card	350	2100	1050
+O0120	C050	Swetha	Shoes	Fashion	2	3000	2025-03-03	Trichy	UPI	1900	6000	2200
+O0121	C056	Pooja	Water Bottle	Home & Kitchen	2	700	2025-04-09	Pondicherry	Debit Card	350	1400	700
+O0122	C026	Anitha	Desk Lamp	Home & Kitchen	5	1000	2025-05-25	Coimbatore	Debit Card	600	5000	2000
+O0123	C078	Deepa	Jeans	Fashion	3	1800	2025-04-02	Chennai	Net Banking	1100	5400	2100
+O0124	C014	Kavya	Keyboard	Electronics	3	1800	2025-01-24	Madurai	Credit Card	1100	5400	2100
+O0125	C147	Rahul	Bedsheet	Home & Kitchen	1	1200	2025-01-07	Madurai	Cash on Delivery	700	1200	500
+O0126	C048	Meena	Bedsheet	Home & Kitchen	4	1200	2025-06-24	Chennai	Debit Card	700	4800	2000
+O0127	C103	Harini	Bedsheet	Home & Kitchen	1	1200	2025-02-03	Pondicherry	UPI	700	1200	500
+O0128	C145	Karthik	Mobile	Electronics	2	22000	2025-03-18	Madurai	UPI	17000	44000	10000
+O0129	C107	Rahul	Jeans	Fashion	1	1800	2025-10-13	Coimbatore	Net Banking	1100	1800	700
+O0130	C077	Ajay	Coffee Maker	Home & Kitchen	4	4500	2025-08-15	Salem	Debit Card	2900	18000	6400
+O0131	C054	Kavya	Mobile	Electronics	5	22000	2025-02-20	Coimbatore	Debit Card	17000	110000	25000
+O0132	C045	Karthik	Headphones	Electronics	2	2500	2025-05-03	Bengaluru	Credit Card	1500	5000	2000
+O0133	C121	Priya	Laptop	Electronics	4	55000	2025-08-19	Madurai	UPI	42000	220000	52000
+O0134	C073	Ravi	Jeans	Fashion	3	1800	2025-12-28	Pondicherry	UPI	1100	5400	2100
+O0135	C051	Vijay	Jeans	Fashion	3	1800	2025-11-17	Salem	UPI	1100	5400	2100
+O0136	C039	Manoj	Water Bottle	Home & Kitchen	2	700	2025-11-28	Madurai	Credit Card	350	1400	700
+O0137	C079	Manoj	Headphones	Electronics	1	2500	2025-03-26	Madurai	Cash on Delivery	1500	2500	1000
+O0138	C078	Deepa	Smart Watch	Electronics	4	5000	2025-12-19	Salem	Debit Card	3200	20000	7200
+O0139	C113	Ravi	Desk Lamp	Home & Kitchen	5	1000	2025-09-10	Bengaluru	Net Banking	600	5000	2000
+O0140	C065	Karthik	Mobile	Electronics	4	22000	2025-06-15	Chennai	UPI	17000	88000	20000
+O0141	C006	Anitha	Jeans	Fashion	5	1800	2025-10-28	Madurai	Net Banking	1100	9000	3500
+O0142	C133	Ravi	Mobile	Electronics	2	22000	2025-08-29	Pondicherry	Debit Card	17000	44000	10000
+O0143	C126	Anitha	Mouse	Electronics	5	900	2025-08-12	Bengaluru	Cash on Delivery	500	4500	2000
+O0144	C083	Harini	Saree	Fashion	4	2500	2025-06-20	Bengaluru	Credit Card	1600	10000	3600
+O0145	C127	Rahul	Backpack	Fashion	4	1500	2025-12-22	Madurai	Cash on Delivery	900	6000	2400
+O0146	C023	Harini	Water Bottle	Home & Kitchen	1	700	2025-08-21	Trichy	Debit Card	350	700	350
+O0147	C132	Nisha	Backpack	Fashion	1	1500	2025-07-26	Chennai	Net Banking	900	1500	600
+O0148	C049	Arun	Cookware Set	Home & Kitchen	4	2800	2025-01-28	Trichy	Net Banking	1800	11200	4000
+O0149	C053	Ravi	Bedsheet	Home & Kitchen	4	1200	2025-01-27	Madurai	Net Banking	700	4800	2000
+O0150	C125	Karthik	Keyboard	Electronics	3	1800	2025-08-13	Bengaluru	UPI	1100	5400	2100
+O0151	C142	Sanjay	Jeans	Fashion	2	1800	2025-06-09	Chennai	Net Banking	1100	3600	1400
+O0152	C030	Swetha	Mixer Grinder	Home & Kitchen	1	3500	2025-04-26	Pondicherry	UPI	2300	3500	1200
+O0153	C131	Vijay	Keyboard	Electronics	4	1800	2025-05-30	Madurai	Cash on Delivery	1100	7200	2800
+O0154	C117	Ajay	Bedsheet	Home & Kitchen	4	1200	2025-05-05	Hyderabad	Cash on Delivery	700	4800	2000
+O0155	C035	Suresh	T-Shirt	Fashion	5	800	2025-09-18	Bengaluru	Debit Card	450	4000	1750
+O0156	C069	Arun	Mixer Grinder	Home & Kitchen	3	3500	2025-09-17	Chennai	Debit Card	2300	10500	3600
+O0157	C126	Anitha	Hoodie	Fashion	5	2200	2025-10-24	Hyderabad	Cash on Delivery	1400	11000	4000
+O0158	C086	Anitha	Water Bottle	Home & Kitchen	4	700	2025-06-26	Salem	Cash on Delivery	350	2800	1400
+O0159	C062	Sanjay	Backpack	Fashion	2	1500	2025-12-24	Salem	Credit Card	900	3000	1200
+O0160	C122	Sanjay	Mixer Grinder	Home & Kitchen	1	3500	2025-06-12	Salem	Cash on Delivery	2300	3500	1200
+O0161	C033	Ravi	Keyboard	Electronics	4	1800	2025-01-19	Trichy	UPI	1100	7200	2800
+O0162	C117	Ajay	Cookware Set	Home & Kitchen	1	2800	2025-09-27	Chennai	Credit Card	1800	2800	1000
+O0163	C121	Priya	Mixer Grinder	Home & Kitchen	2	3500	2025-02-08	Madurai	Debit Card	2300	7000	2400
+O0164	C137	Ajay	Coffee Maker	Home & Kitchen	1	4500	2025-06-18	Salem	Debit Card	2900	4500	1600
+O0165	C018	Deepa	Bedsheet	Home & Kitchen	5	1200	2025-01-19	Coimbatore	Debit Card	700	6000	2500
+O0166	C026	Anitha	Jeans	Fashion	1	1800	2025-08-11	Bengaluru	Cash on Delivery	1100	1800	700
+O0167	C012	Nisha	Mouse	Electronics	3	900	2025-01-15	Trichy	UPI	500	2700	1200
+O0168	C111	Vijay	Hoodie	Fashion	3	2200	2025-07-11	Hyderabad	Credit Card	1400	6600	2400
+O0169	C047	Rahul	Desk Lamp	Home & Kitchen	4	1000	2025-10-17	Hyderabad	Credit Card	600	4000	1600
+O0170	C062	Sanjay	Headphones	Electronics	5	2500	2025-07-15	Pondicherry	Net Banking	1500	12500	5000
+O0171	C066	Anitha	Keyboard	Electronics	2	1800	2025-08-25	Pondicherry	Debit Card	1100	3600	1400
+O0172	C140	Keerthana	Laptop	Electronics	4	55000	2025-05-28	Hyderabad	UPI	42000	220000	52000
+O0173	C077	Ajay	Cookware Set	Home & Kitchen	3	2800	2025-10-28	Salem	Debit Card	1800	8400	3000
+O0174	C099	Manoj	Cookware Set	Home & Kitchen	3	2800	2025-04-12	Pondicherry	UPI	1800	8400	3000
+O0175	C092	Nisha	Jeans	Fashion	4	1800	2025-10-20	Madurai	Debit Card	1100	7200	2800
+O0176	C003	Harini	Laptop	Electronics	4	55000	2025-05-21	Chennai	Net Banking	42000	220000	52000
+O0177	C091	Vijay	Bedsheet	Home & Kitchen	3	1200	2025-04-28	Coimbatore	Credit Card	700	3600	1500
+O0178	C025	Karthik	Shoes	Fashion	2	3000	2025-11-18	Chennai	Debit Card	1900	6000	2200
+O0179	C094	Kavya	Cookware Set	Home & Kitchen	1	2800	2025-10-24	Hyderabad	UPI	1800	2800	1000
+O0180	C045	Karthik	Hoodie	Fashion	3	2200	2025-08-01	Coimbatore	Credit Card	1400	6600	2400
+O0181	C129	Arun	Water Bottle	Home & Kitchen	3	700	2025-09-29	Madurai	Credit Card	350	2100	1050
+O0182	C087	Rahul	Shoes	Fashion	4	3000	2025-06-01	Bengaluru	Cash on Delivery	1900	12000	4400
+O0183	C102	Sanjay	Headphones	Electronics	2	2500	2025-04-26	Trichy	UPI	1500	5000	2000
+O0184	C138	Deepa	Coffee Maker	Home & Kitchen	1	4500	2025-05-16	Bengaluru	Cash on Delivery	2900	4500	1600
+O0185	C098	Deepa	Saree	Fashion	3	2500	2025-10-27	Trichy	UPI	1600	7500	2700
+O0186	C144	Divya	Jeans	Fashion	4	1800	2025-01-13	Trichy	Net Banking	1100	7200	2800
+O0187	C119	Manoj	Jeans	Fashion	1	1800	2025-11-22	Madurai	Cash on Delivery	1100	1800	700
+O0188	C010	Swetha	Smart Watch	Electronics	2	5000	2025-01-24	Madurai	Cash on Delivery	3200	10000	3600
+O0189	C138	Deepa	Smart Watch	Electronics	1	5000	2025-05-01	Hyderabad	Cash on Delivery	3200	5000	1800
+O0190	C139	Manoj	Cookware Set	Home & Kitchen	3	2800	2025-12-10	Salem	Net Banking	1800	8400	3000
+O0191	C026	Anitha	Keyboard	Electronics	4	1800	2025-12-02	Pondicherry	Net Banking	1100	7200	2800
+O0192	C095	Suresh	Mixer Grinder	Home & Kitchen	3	3500	2025-01-17	Coimbatore	Cash on Delivery	2300	10500	3600
+O0193	C026	Anitha	Cookware Set	Home & Kitchen	2	2800	2025-07-05	Trichy	Net Banking	1800	5600	2000
+O0194	C071	Vijay	Saree	Fashion	1	2500	2025-07-23	Coimbatore	UPI	1600	2500	900
+O0195	C055	Suresh	Cookware Set	Home & Kitchen	1	2800	2025-12-06	Chennai	UPI	1800	2800	1000
+O0196	C145	Karthik	Backpack	Fashion	2	1500	2025-03-06	Coimbatore	UPI	900	3000	1200
+O0197	C056	Pooja	Water Bottle	Home & Kitchen	2	700	2025-10-28	Coimbatore	Debit Card	350	1400	700
+O0198	C071	Vijay	Keyboard	Electronics	5	1800	2025-01-02	Hyderabad	Credit Card	1100	9000	3500
+O0199	C029	Arun	Water Bottle	Home & Kitchen	3	700	2025-03-31	Chennai	Credit Card	350	2100	1050
+O0200	C083	Harini	Laptop	Electronics	3	55000	2025-05-02	Chennai	Credit Card	42000	165000	39000
+O0201	C108	Meena	Shoes	Fashion	1	3000	2025-03-06	Bengaluru	UPI	1900	3000	1100
+O0202	C132	Nisha	Bedsheet	Home & Kitchen	4	1200	2025-07-05	Bengaluru	Cash on Delivery	700	4800	2000
+O0203	C012	Nisha	Desk Lamp	Home & Kitchen	2	1000	2025-11-11	Madurai	Cash on Delivery	600	2000	800
+O0204	C103	Harini	Laptop	Electronics	1	55000	2025-09-03	Salem	UPI	42000	55000	13000
+O0205	C021	Priya	Bedsheet	Home & Kitchen	4	1200	2025-02-07	Trichy	Net Banking	700	4800	2000
+O0206	C071	Vijay	Keyboard	Electronics	1	1800	2025-03-06	Trichy	Cash on Delivery	1100	1800	700
+O0207	C130	Swetha	Desk Lamp	Home & Kitchen	3	1000	2025-08-21	Salem	UPI	600	3000	1200
+O0208	C111	Vijay	Smart Watch	Electronics	5	5000	2025-04-21	Pondicherry	Credit Card	3200	25000	9000
+O0209	C103	Harini	Mixer Grinder	Home & Kitchen	3	3500	2025-08-21	Salem	UPI	2300	10500	3600
+O0210	C066	Anitha	Backpack	Fashion	4	1500	2025-06-10	Trichy	Credit Card	900	6000	2400
+O0211	C022	Sanjay	Bedsheet	Home & Kitchen	1	1200	2025-02-16	Bengaluru	Cash on Delivery	700	1200	500
+O0212	C143	Harini	Smart Watch	Electronics	3	5000	2025-03-08	Chennai	Net Banking	3200	15000	5400
+O0213	C032	Nisha	Water Bottle	Home & Kitchen	5	700	2025-06-18	Salem	Debit Card	350	3500	1750
+O0214	C080	Keerthana	Mixer Grinder	Home & Kitchen	1	3500	2025-05-28	Trichy	UPI	2300	3500	1200
+O0215	C124	Divya	Desk Lamp	Home & Kitchen	2	1000	2025-03-21	Coimbatore	UPI	600	2000	800
+O0216	C030	Swetha	Saree	Fashion	5	2500	2025-07-08	Madurai	Net Banking	1600	12500	4500
+O0217	C143	Harini	Jeans	Fashion	4	1800	2025-10-15	Chennai	Net Banking	1100	7200	2800
+O0218	C070	Swetha	Shoes	Fashion	1	3000	2025-04-03	Madurai	Debit Card	1900	3000	1100
+O0219	C037	Ajay	Saree	Fashion	1	2500	2025-04-03	Salem	UPI	1600	2500	900
+O0220	C136	Pooja	Keyboard	Electronics	1	1800	2025-02-16	Coimbatore	Cash on Delivery	1100	1800	700
+O0221	C041	Priya	Mixer Grinder	Home & Kitchen	4	3500	2025-06-24	Trichy	Debit Card	2300	14000	4800
+O0222	C022	Sanjay	Backpack	Fashion	5	1500	2025-11-02	Chennai	Credit Card	900	7500	3000
+O0223	C021	Priya	Mouse	Electronics	5	900	2025-01-26	Madurai	Cash on Delivery	500	4500	2000
+O0224	C114	Kavya	Mixer Grinder	Home & Kitchen	4	3500	2025-11-07	Salem	Debit Card	2300	14000	4800
+O0225	C089	Arun	T-Shirt	Fashion	5	800	2025-02-28	Salem	UPI	450	4000	1750
+O0226	C135	Suresh	Hoodie	Fashion	5	2200	2025-09-07	Madurai	UPI	1400	11000	4000
+O0227	C015	Suresh	Jeans	Fashion	4	1800	2025-11-03	Chennai	Credit Card	1100	7200	2800
+O0228	C066	Anitha	Hoodie	Fashion	2	2200	2025-03-12	Madurai	Debit Card	1400	4400	1600
+O0229	C111	Vijay	Smart Watch	Electronics	1	5000	2025-09-12	Hyderabad	Credit Card	3200	5000	1800
+O0230	C059	Manoj	Coffee Maker	Home & Kitchen	5	4500	2025-12-27	Trichy	UPI	2900	22500	8000
+O0231	C005	Karthik	Coffee Maker	Home & Kitchen	1	4500	2025-08-12	Pondicherry	UPI	2900	4500	1600
+O0232	C147	Rahul	Backpack	Fashion	5	1500	2025-08-08	Salem	Cash on Delivery	900	7500	3000
+O0233	C006	Anitha	Hoodie	Fashion	1	2200	2025-07-27	Trichy	Credit Card	1400	2200	800
+O0234	C112	Nisha	Cookware Set	Home & Kitchen	3	2800	2025-02-15	Bengaluru	Credit Card	1800	8400	3000
+O0235	C135	Suresh	Mixer Grinder	Home & Kitchen	5	3500	2025-07-25	Bengaluru	Cash on Delivery	2300	17500	6000
+O0236	C086	Anitha	Hoodie	Fashion	3	2200	2025-04-24	Hyderabad	UPI	1400	6600	2400
+O0237	C131	Vijay	Desk Lamp	Home & Kitchen	1	1000	2025-09-29	Coimbatore	Debit Card	600	1000	400
+O0238	C027	Rahul	Saree	Fashion	2	2500	2025-05-01	Hyderabad	Debit Card	1600	5000	1800
+O0239	C040	Keerthana	T-Shirt	Fashion	2	800	2025-11-05	Bengaluru	Credit Card	450	1600	700
+O0240	C149	Arun	Bedsheet	Home & Kitchen	4	1200	2025-10-16	Pondicherry	Net Banking	700	4800	2000
+O0241	C113	Ravi	Backpack	Fashion	3	1500	2025-03-19	Bengaluru	Cash on Delivery	900	4500	1800
+O0242	C015	Suresh	Cookware Set	Home & Kitchen	3	2800	2025-05-21	Trichy	Net Banking	1800	8400	3000
+O0243	C116	Pooja	Headphones	Electronics	3	2500	2025-08-25	Chennai	UPI	1500	7500	3000
+O0244	C024	Divya	Saree	Fashion	3	2500	2025-02-09	Salem	Cash on Delivery	1600	7500	2700
+O0245	C147	Rahul	Water Bottle	Home & Kitchen	1	700	2025-08-19	Coimbatore	Debit Card	350	700	350
+O0246	C016	Pooja	Bedsheet	Home & Kitchen	5	1200	2025-03-19	Pondicherry	UPI	700	6000	2500
+O0247	C045	Karthik	Backpack	Fashion	1	1500	2025-09-16	Chennai	Credit Card	900	1500	600
+O0248	C134	Kavya	Cookware Set	Home & Kitchen	4	2800	2025-09-26	Hyderabad	Debit Card	1800	11200	4000
+O0249	C105	Karthik	Saree	Fashion	3	2500	2025-07-18	Trichy	Net Banking	1600	7500	2700
+O0250	C085	Karthik	Mobile	Electronics	3	22000	2025-02-03	Bengaluru	Net Banking	17000	66000	15000
+O0251	C039	Manoj	Coffee Maker	Home & Kitchen	3	4500	2025-05-10	Trichy	UPI	2900	13500	4800
+O0252	C101	Priya	Keyboard	Electronics	3	1800	2025-06-08	Hyderabad	Net Banking	1100	5400	2100
+O0253	C097	Ajay	Headphones	Electronics	3	2500	2025-10-14	Trichy	Credit Card	1500	7500	3000
+O0254	C109	Arun	Desk Lamp	Home & Kitchen	1	1000	2025-11-27	Trichy	UPI	600	1000	400
+O0255	C055	Suresh	Saree	Fashion	3	2500	2025-04-03	Trichy	Cash on Delivery	1600	7500	2700
+O0256	C040	Keerthana	T-Shirt	Fashion	2	800	2025-03-12	Bengaluru	Debit Card	450	1600	700
+O0257	C135	Suresh	Smart Watch	Electronics	5	5000	2025-10-04	Chennai	Debit Card	3200	25000	9000
+O0258	C040	Keerthana	Keyboard	Electronics	5	1800	2025-07-12	Hyderabad	Credit Card	1100	9000	3500
+O0259	C106	Anitha	Mouse	Electronics	4	900	2025-01-23	Trichy	Credit Card	500	3600	1600
+O0260	C115	Suresh	Cookware Set	Home & Kitchen	5	2800	2025-05-26	Coimbatore	Net Banking	1800	14000	5000
+O0261	C050	Swetha	Jeans	Fashion	3	1800	2025-08-29	Trichy	Net Banking	1100	5400	2100
+O0262	C098	Deepa	Cookware Set	Home & Kitchen	4	2800	2025-05-25	Salem	Credit Card	1800	11200	4000
+O0263	C065	Karthik	T-Shirt	Fashion	5	800	2025-03-12	Chennai	Cash on Delivery	450	4000	1750
+O0264	C133	Ravi	Saree	Fashion	5	2500	2025-02-22	Bengaluru	Debit Card	1600	12500	4500
+O0265	C116	Pooja	Headphones	Electronics	2	2500	2025-05-20	Hyderabad	Cash on Delivery	1500	5000	2000
+O0266	C090	Swetha	Headphones	Electronics	2	2500	2025-08-19	Chennai	Cash on Delivery	1500	5000	2000
+O0267	C096	Pooja	Mobile	Electronics	4	22000	2025-09-15	Coimbatore	Cash on Delivery	17000	88000	20000
+O0268	C008	Meena	Headphones	Electronics	3	2500	2025-04-25	Trichy	UPI	1500	7500	3000
+O0269	C010	Swetha	Backpack	Fashion	2	1500	2025-03-12	Madurai	Cash on Delivery	900	3000	1200
+O0270	C002	Sanjay	Keyboard	Electronics	4	1800	2025-08-18	Bengaluru	UPI	1100	7200	2800
+O0271	C141	Priya	Shoes	Fashion	2	3000	2025-03-18	Salem	UPI	1900	6000	2200
+O0272	C032	Nisha	Hoodie	Fashion	2	2200	2025-06-04	Chennai	Credit Card	1400	4400	1600
+O0273	C017	Ajay	Mixer Grinder	Home & Kitchen	5	3500	2025-08-23	Bengaluru	Cash on Delivery	2300	17500	6000
+O0274	C132	Nisha	Water Bottle	Home & Kitchen	1	700	2025-11-20	Coimbatore	Credit Card	350	700	350
+O0275	C091	Vijay	Hoodie	Fashion	4	2200	2025-01-01	Coimbatore	Net Banking	1400	8800	3200
+O0276	C022	Sanjay	Mixer Grinder	Home & Kitchen	2	3500	2025-12-07	Trichy	UPI	2300	7000	2400
+O0277	C130	Swetha	Desk Lamp	Home & Kitchen	5	1000	2025-09-17	Chennai	Cash on Delivery	600	5000	2000
+O0278	C100	Keerthana	Bedsheet	Home & Kitchen	1	1200	2025-11-22	Trichy	Debit Card	700	1200	500
+O0279	C089	Arun	Laptop	Electronics	3	55000	2025-02-04	Coimbatore	UPI	42000	165000	39000
+O0280	C091	Vijay	Backpack	Fashion	2	1500	2025-01-23	Trichy	Credit Card	900	3000	1200
+O0281	C047	Rahul	Cookware Set	Home & Kitchen	4	2800	2025-11-20	Hyderabad	UPI	1800	11200	4000
+O0282	C052	Nisha	Cookware Set	Home & Kitchen	1	2800	2025-05-31	Chennai	Credit Card	1800	2800	1000
+O0283	C132	Nisha	Mobile	Electronics	3	22000	2025-06-08	Salem	Net Banking	17000	66000	15000
+O0284	C049	Arun	Bedsheet	Home & Kitchen	3	1200	2025-01-19	Madurai	Debit Card	700	3600	1500
+O0285	C032	Nisha	Mobile	Electronics	3	22000	2025-05-20	Trichy	Cash on Delivery	17000	66000	15000
+O0286	C087	Rahul	Coffee Maker	Home & Kitchen	4	4500	2025-07-17	Hyderabad	Cash on Delivery	2900	18000	6400
+O0287	C069	Arun	Bedsheet	Home & Kitchen	3	1200	2025-09-23	Bengaluru	Cash on Delivery	700	3600	1500
+O0288	C047	Rahul	Headphones	Electronics	4	2500	2025-11-05	Madurai	Debit Card	1500	10000	4000
+O0289	C076	Pooja	Smart Watch	Electronics	1	5000	2025-06-17	Madurai	Cash on Delivery	3200	5000	1800
+O0290	C114	Kavya	Mixer Grinder	Home & Kitchen	2	3500	2025-12-20	Trichy	Cash on Delivery	2300	7000	2400
+O0291	C112	Nisha	Mobile	Electronics	3	22000	2025-11-11	Madurai	UPI	17000	66000	15000
+O0292	C132	Nisha	Headphones	Electronics	4	2500	2025-07-06	Hyderabad	UPI	1500	10000	4000
+O0293	C113	Ravi	Keyboard	Electronics	5	1800	2025-12-14	Chennai	Credit Card	1100	9000	3500
+O0294	C094	Kavya	Headphones	Electronics	2	2500	2025-11-27	Trichy	Cash on Delivery	1500	5000	2000
+O0295	C116	Pooja	Mobile	Electronics	5	22000	2025-03-20	Trichy	Debit Card	17000	110000	25000
+O0296	C036	Pooja	Cookware Set	Home & Kitchen	1	2800	2025-10-21	Trichy	Cash on Delivery	1800	2800	1000
+O0297	C030	Swetha	Backpack	Fashion	3	1500	2025-05-08	Chennai	Credit Card	900	4500	1800
+O0298	C144	Divya	Bedsheet	Home & Kitchen	5	1200	2025-07-18	Bengaluru	Debit Card	700	6000	2500
+O0299	C074	Kavya	Shoes	Fashion	4	3000	2025-04-20	Pondicherry	Credit Card	1900	12000	4400
+O0300	C116	Pooja	Smart Watch	Electronics	2	5000	2025-02-07	Hyderabad	Cash on Delivery	3200	10000	3600
+O0301	C089	Arun	Headphones	Electronics	3	2500	2025-12-08	Bengaluru	Net Banking	1500	7500	3000
+O0302	C041	Priya	Water Bottle	Home & Kitchen	3	700	2025-06-03	Hyderabad	Debit Card	350	2100	1050
+O0303	C052	Nisha	Desk Lamp	Home & Kitchen	2	1000	2025-03-04	Hyderabad	Credit Card	600	2000	800
+O0304	C142	Sanjay	Bedsheet	Home & Kitchen	1	1200	2025-07-04	Trichy	Cash on Delivery	700	1200	500
+O0305	C023	Harini	Water Bottle	Home & Kitchen	2	700	2025-11-10	Bengaluru	Debit Card	350	1400	700
+O0306	C106	Anitha	Coffee Maker	Home & Kitchen	4	4500	2025-09-27	Salem	Net Banking	2900	18000	6400
+O0307	C019	Manoj	Headphones	Electronics	2	2500	2025-06-12	Pondicherry	Cash on Delivery	1500	5000	2000
+O0308	C142	Sanjay	Desk Lamp	Home & Kitchen	3	1000	2025-03-07	Hyderabad	Credit Card	600	3000	1200
+O0309	C032	Nisha	Mixer Grinder	Home & Kitchen	5	3500	2025-01-29	Hyderabad	Debit Card	2300	17500	6000
+O0310	C058	Deepa	Mouse	Electronics	2	900	2025-06-15	Trichy	Net Banking	500	1800	800
+O0311	C051	Vijay	Hoodie	Fashion	1	2200	2025-05-09	Madurai	Credit Card	1400	2200	800
+O0312	C024	Divya	Hoodie	Fashion	5	2200	2025-10-01	Hyderabad	Net Banking	1400	11000	4000
+O0313	C087	Rahul	Keyboard	Electronics	2	1800	2025-12-04	Chennai	UPI	1100	3600	1400
+O0314	C148	Meena	Headphones	Electronics	1	2500	2025-11-25	Madurai	Credit Card	1500	2500	1000
+O0315	C008	Meena	Mixer Grinder	Home & Kitchen	5	3500	2025-11-24	Pondicherry	Net Banking	2300	17500	6000
+O0316	C063	Harini	Hoodie	Fashion	3	2200	2025-09-05	Salem	Debit Card	1400	6600	2400
+O0317	C016	Pooja	Cookware Set	Home & Kitchen	1	2800	2025-12-19	Hyderabad	Cash on Delivery	1800	2800	1000
+O0318	C053	Ravi	Mixer Grinder	Home & Kitchen	4	3500	2025-08-26	Trichy	Net Banking	2300	14000	4800
+O0319	C089	Arun	Keyboard	Electronics	3	1800	2025-06-13	Salem	Credit Card	1100	5400	2100
+O0320	C028	Meena	Saree	Fashion	5	2500	2025-10-15	Trichy	Credit Card	1600	12500	4500
+O0321	C116	Pooja	Cookware Set	Home & Kitchen	1	2800	2025-05-17	Coimbatore	Credit Card	1800	2800	1000
+O0322	C099	Manoj	Smart Watch	Electronics	1	5000	2025-05-29	Salem	Credit Card	3200	5000	1800
+O0323	C081	Priya	Mouse	Electronics	3	900	2025-10-23	Coimbatore	Credit Card	500	2700	1200
+O0324	C128	Meena	Bedsheet	Home & Kitchen	5	1200	2025-08-28	Madurai	Cash on Delivery	700	6000	2500
+O0325	C130	Swetha	Laptop	Electronics	1	55000	2025-07-21	Pondicherry	Credit Card	42000	55000	13000
+O0326	C013	Ravi	T-Shirt	Fashion	5	800	2025-06-30	Chennai	Debit Card	450	4000	1750
+O0327	C121	Priya	Bedsheet	Home & Kitchen	5	1200	2025-12-01	Madurai	Net Banking	700	6000	2500
+O0328	C035	Suresh	Laptop	Electronics	1	55000	2025-08-09	Madurai	Debit Card	42000	55000	13000
+O0329	C103	Harini	Coffee Maker	Home & Kitchen	3	4500	2025-01-24	Chennai	Net Banking	2900	13500	4800
+O0330	C142	Sanjay	Water Bottle	Home & Kitchen	2	700	2025-07-05	Madurai	UPI	350	1400	700
+O0331	C141	Priya	Coffee Maker	Home & Kitchen	5	4500	2025-08-19	Madurai	Net Banking	2900	22500	8000
+O0332	C101	Priya	Smart Watch	Electronics	2	5000	2025-02-19	Trichy	Debit Card	3200	10000	3600
+O0333	C051	Vijay	Water Bottle	Home & Kitchen	3	700	2025-03-15	Salem	Net Banking	350	2100	1050
+O0334	C036	Pooja	Mobile	Electronics	1	22000	2025-01-20	Trichy	Cash on Delivery	17000	22000	5000
+O0335	C132	Nisha	Desk Lamp	Home & Kitchen	4	1000	2025-03-18	Hyderabad	Debit Card	600	4000	1600
+O0336	C077	Ajay	Backpack	Fashion	2	1500	2025-07-21	Trichy	Net Banking	900	3000	1200
+O0337	C145	Karthik	Desk Lamp	Home & Kitchen	5	1000	2025-09-08	Madurai	Cash on Delivery	600	5000	2000
+O0338	C029	Arun	Laptop	Electronics	3	55000	2025-06-19	Salem	Net Banking	42000	165000	39000
+O0339	C122	Sanjay	Hoodie	Fashion	1	2200	2025-11-02	Madurai	Net Banking	1400	2200	800
+O0340	C123	Harini	Jeans	Fashion	1	1800	2025-10-26	Hyderabad	Net Banking	1100	1800	700
+O0341	C063	Harini	Coffee Maker	Home & Kitchen	2	4500	2025-12-15	Chennai	Net Banking	2900	9000	3200
+O0342	C113	Ravi	Smart Watch	Electronics	2	5000	2025-01-10	Trichy	Cash on Delivery	3200	10000	3600
+O0343	C053	Ravi	Keyboard	Electronics	4	1800	2025-12-20	Salem	Net Banking	1100	7200	2800
+O0344	C036	Pooja	Bedsheet	Home & Kitchen	1	1200	2025-12-28	Coimbatore	Net Banking	700	1200	500
+O0345	C097	Ajay	Backpack	Fashion	4	1500	2025-09-27	Trichy	Credit Card	900	6000	2400
+O0346	C140	Keerthana	Cookware Set	Home & Kitchen	5	2800	2025-06-25	Trichy	Debit Card	1800	14000	5000
+O0347	C072	Nisha	Bedsheet	Home & Kitchen	2	1200	2025-05-07	Madurai	Credit Card	700	2400	1000
+O0348	C054	Kavya	Hoodie	Fashion	3	2200	2025-12-27	Pondicherry	Debit Card	1400	6600	2400
+O0349	C071	Vijay	Bedsheet	Home & Kitchen	3	1200	2025-10-14	Madurai	UPI	700	3600	1500
+O0350	C089	Arun	Water Bottle	Home & Kitchen	4	700	2025-07-22	Hyderabad	Debit Card	350	2800	1400
+O0351	C089	Arun	Mobile	Electronics	3	22000	2025-02-10	Pondicherry	Debit Card	17000	66000	15000
+O0352	C138	Deepa	Bedsheet	Home & Kitchen	2	1200	2025-04-14	Madurai	Net Banking	700	2400	1000
+O0353	C062	Sanjay	Shoes	Fashion	2	3000	2025-02-25	Coimbatore	UPI	1900	6000	2200
+O0354	C060	Keerthana	Desk Lamp	Home & Kitchen	2	1000	2025-11-23	Chennai	UPI	600	2000	800
+O0355	C026	Anitha	Mixer Grinder	Home & Kitchen	3	3500	2025-08-30	Hyderabad	UPI	2300	10500	3600
+O0356	C122	Sanjay	Water Bottle	Home & Kitchen	2	700	2025-07-28	Pondicherry	Credit Card	350	1400	700
+O0357	C016	Pooja	Hoodie	Fashion	3	2200	2025-05-27	Bengaluru	Net Banking	1400	6600	2400
+O0358	C045	Karthik	Jeans	Fashion	5	1800	2025-01-20	Salem	Credit Card	1100	9000	3500
+O0359	C048	Meena	Mobile	Electronics	4	22000	2025-09-11	Madurai	UPI	17000	88000	20000
+O0360	C028	Meena	Laptop	Electronics	3	55000	2025-10-18	Trichy	Debit Card	42000	165000	39000
+O0361	C127	Rahul	Cookware Set	Home & Kitchen	5	2800	2025-09-26	Hyderabad	Net Banking	1800	14000	5000
+O0362	C029	Arun	Cookware Set	Home & Kitchen	3	2800	2025-04-09	Trichy	Credit Card	1800	8400	3000
+O0363	C004	Divya	Cookware Set	Home & Kitchen	3	2800	2025-04-06	Trichy	Debit Card	1800	8400	3000
+O0364	C104	Divya	T-Shirt	Fashion	2	800	2025-11-09	Salem	Net Banking	450	1600	700
+O0365	C025	Karthik	Backpack	Fashion	1	1500	2025-07-25	Hyderabad	Credit Card	900	1500	600
+O0366	C002	Sanjay	Bedsheet	Home & Kitchen	3	1200	2025-05-08	Madurai	Cash on Delivery	700	3600	1500
+O0367	C085	Karthik	Jeans	Fashion	4	1800	2025-05-17	Madurai	Net Banking	1100	7200	2800
+O0368	C093	Ravi	Laptop	Electronics	3	55000	2025-12-01	Coimbatore	UPI	42000	165000	39000
+O0369	C041	Priya	Smart Watch	Electronics	4	5000	2025-06-07	Salem	Net Banking	3200	20000	7200
+O0370	C076	Pooja	Hoodie	Fashion	1	2200	2025-11-24	Trichy	Net Banking	1400	2200	800
+O0371	C123	Harini	Jeans	Fashion	2	1800	2025-03-10	Hyderabad	Cash on Delivery	1100	3600	1400
+O0372	C141	Priya	Saree	Fashion	4	2500	2025-12-26	Pondicherry	Net Banking	1600	10000	3600
+O0373	C021	Priya	T-Shirt	Fashion	2	800	2025-12-15	Pondicherry	Net Banking	450	1600	700
+O0374	C029	Arun	Saree	Fashion	1	2500	2025-10-16	Chennai	Net Banking	1600	2500	900
+O0375	C138	Deepa	Desk Lamp	Home & Kitchen	2	1000	2025-10-21	Hyderabad	Credit Card	600	2000	800
+O0376	C030	Swetha	Backpack	Fashion	5	1500	2025-08-15	Coimbatore	Net Banking	900	7500	3000
+O0377	C115	Suresh	Bedsheet	Home & Kitchen	1	1200	2025-09-19	Chennai	Cash on Delivery	700	1200	500
+O0378	C117	Ajay	Keyboard	Electronics	5	1800	2025-08-01	Chennai	Net Banking	1100	9000	3500
+O0379	C102	Sanjay	Cookware Set	Home & Kitchen	3	2800	2025-01-12	Madurai	UPI	1800	8400	3000
+O0380	C012	Nisha	T-Shirt	Fashion	5	800	2025-02-07	Salem	Debit Card	450	4000	1750
+O0381	C018	Deepa	Headphones	Electronics	5	2500	2025-01-31	Pondicherry	UPI	1500	12500	5000
+O0382	C035	Suresh	Hoodie	Fashion	4	2200	2025-04-03	Salem	Debit Card	1400	8800	3200
+O0383	C097	Ajay	Coffee Maker	Home & Kitchen	4	4500	2025-07-13	Bengaluru	Net Banking	2900	18000	6400
+O0384	C046	Anitha	Keyboard	Electronics	3	1800	2025-03-02	Salem	Net Banking	1100	5400	2100
+O0385	C006	Anitha	Keyboard	Electronics	2	1800	2025-01-02	Madurai	Cash on Delivery	1100	3600	1400
+O0386	C098	Deepa	Water Bottle	Home & Kitchen	4	700	2025-09-30	Coimbatore	Credit Card	350	2800	1400
+O0387	C071	Vijay	Cookware Set	Home & Kitchen	3	2800	2025-03-21	Coimbatore	UPI	1800	8400	3000
+O0388	C005	Karthik	Mobile	Electronics	4	22000	2025-11-11	Coimbatore	Credit Card	17000	88000	20000
+O0389	C009	Arun	Headphones	Electronics	1	2500	2025-11-01	Pondicherry	Net Banking	1500	2500	1000
+O0390	C103	Harini	Mobile	Electronics	2	22000	2025-01-23	Pondicherry	Credit Card	17000	44000	10000
+O0391	C036	Pooja	Water Bottle	Home & Kitchen	2	700	2025-01-29	Madurai	Credit Card	350	1400	700
+O0392	C083	Harini	Backpack	Fashion	5	1500	2025-11-03	Coimbatore	Debit Card	900	7500	3000
+O0393	C106	Anitha	Keyboard	Electronics	5	1800	2025-04-24	Madurai	Debit Card	1100	9000	3500
+O0394	C045	Karthik	Mobile	Electronics	5	22000	2025-10-30	Salem	Net Banking	17000	110000	25000
+O0395	C098	Deepa	Bedsheet	Home & Kitchen	1	1200	2025-06-26	Trichy	Cash on Delivery	700	1200	500
+O0396	C097	Ajay	Mixer Grinder	Home & Kitchen	2	3500	2025-06-03	Hyderabad	Net Banking	2300	7000	2400
+O0397	C077	Ajay	Bedsheet	Home & Kitchen	2	1200	2025-04-26	Hyderabad	Cash on Delivery	700	2400	1000
+O0398	C107	Rahul	Mobile	Electronics	5	22000	2025-07-31	Hyderabad	Cash on Delivery	17000	110000	25000
+O0399	C085	Karthik	Jeans	Fashion	3	1800	2025-04-15	Bengaluru	Cash on Delivery	1100	5400	2100
+O0400	C049	Arun	Saree	Fashion	1	2500	2025-10-02	Chennai	Debit Card	1600	2500	900
+O0401	C011	Vijay	Coffee Maker	Home & Kitchen	5	4500	2025-11-05	Bengaluru	Credit Card	2900	22500	8000
+O0402	C054	Kavya	Water Bottle	Home & Kitchen	2	700	2025-09-03	Trichy	Debit Card	350	1400	700
+O0403	C031	Vijay	Laptop	Electronics	2	55000	2025-04-08	Pondicherry	Credit Card	42000	110000	26000
+O0404	C142	Sanjay	T-Shirt	Fashion	4	800	2025-05-03	Trichy	Debit Card	450	3200	1400
+O0405	C092	Nisha	Coffee Maker	Home & Kitchen	4	4500	2025-10-01	Madurai	Debit Card	2900	18000	6400
+O0406	C120	Keerthana	Saree	Fashion	5	2500	2025-09-12	Bengaluru	Cash on Delivery	1600	12500	4500
+O0407	C081	Priya	Backpack	Fashion	2	1500	2025-07-09	Salem	UPI	900	3000	1200
+O0408	C067	Rahul	Jeans	Fashion	2	1800	2025-01-09	Salem	Debit Card	1100	3600	1400
+O0409	C059	Manoj	Keyboard	Electronics	2	1800	2025-06-18	Salem	Net Banking	1100	3600	1400
+O0410	C087	Rahul	Jeans	Fashion	4	1800	2025-10-09	Madurai	Cash on Delivery	1100	7200	2800
+O0411	C091	Vijay	Bedsheet	Home & Kitchen	4	1200	2025-03-28	Hyderabad	Credit Card	700	4800	2000
+O0412	C139	Manoj	Water Bottle	Home & Kitchen	4	700	2025-04-05	Chennai	Net Banking	350	2800	1400
+O0413	C013	Ravi	Mobile	Electronics	1	22000	2025-12-09	Chennai	Cash on Delivery	17000	22000	5000
+O0414	C039	Manoj	Keyboard	Electronics	2	1800	2025-02-04	Chennai	Credit Card	1100	3600	1400
+O0415	C016	Pooja	Desk Lamp	Home & Kitchen	4	1000	2025-07-11	Pondicherry	Cash on Delivery	600	4000	1600
+O0416	C142	Sanjay	Laptop	Electronics	1	55000	2025-09-30	Salem	UPI	42000	55000	13000
+O0417	C138	Deepa	Laptop	Electronics	5	55000	2025-05-21	Madurai	UPI	42000	275000	65000
+O0418	C028	Meena	Desk Lamp	Home & Kitchen	4	1000	2025-04-02	Bengaluru	Net Banking	600	4000	1600
+O0419	C135	Suresh	Keyboard	Electronics	2	1800	2025-04-09	Madurai	Debit Card	1100	3600	1400
+O0420	C096	Pooja	Shoes	Fashion	4	3000	2025-02-10	Salem	Cash on Delivery	1900	12000	4400
+O0421	C021	Priya	Jeans	Fashion	2	1800	2025-06-03	Chennai	UPI	1100	3600	1400
+O0422	C142	Sanjay	Coffee Maker	Home & Kitchen	4	4500	2025-07-13	Pondicherry	UPI	2900	18000	6400
+O0423	C128	Meena	Laptop	Electronics	2	55000	2025-02-12	Salem	Debit Card	42000	110000	26000
+O0424	C059	Manoj	Smart Watch	Electronics	5	5000	2025-01-22	Coimbatore	Net Banking	3200	25000	9000
+O0425	C020	Keerthana	Bedsheet	Home & Kitchen	3	1200	2025-01-24	Madurai	Net Banking	700	3600	1500
+O0426	C005	Karthik	Mobile	Electronics	2	22000	2025-06-11	Coimbatore	Net Banking	17000	44000	10000
+O0427	C077	Ajay	Keyboard	Electronics	4	1800	2025-02-09	Hyderabad	Net Banking	1100	7200	2800
+O0428	C139	Manoj	Jeans	Fashion	5	1800	2025-07-19	Trichy	Cash on Delivery	1100	9000	3500
+O0429	C089	Arun	Keyboard	Electronics	1	1800	2025-09-14	Chennai	UPI	1100	1800	700
+O0430	C088	Meena	Mixer Grinder	Home & Kitchen	2	3500	2025-02-08	Salem	Debit Card	2300	7000	2400
+O0431	C126	Anitha	Laptop	Electronics	3	55000	2025-08-19	Coimbatore	Debit Card	42000	165000	39000
+O0432	C048	Meena	Water Bottle	Home & Kitchen	4	700	2025-08-10	Salem	UPI	350	2800	1400
+O0433	C022	Sanjay	Hoodie	Fashion	2	2200	2025-02-07	Madurai	Credit Card	1400	4400	1600
+O0434	C082	Sanjay	Coffee Maker	Home & Kitchen	2	4500	2025-07-19	Trichy	UPI	2900	9000	3200
+O0435	C114	Kavya	Headphones	Electronics	1	2500	2025-06-07	Trichy	Debit Card	1500	2500	1000
+O0436	C048	Meena	Smart Watch	Electronics	2	5000	2025-02-14	Salem	Cash on Delivery	3200	10000	3600
+O0437	C105	Karthik	Water Bottle	Home & Kitchen	5	700	2025-09-20	Bengaluru	UPI	350	3500	1750
+O0438	C024	Divya	Headphones	Electronics	3	2500	2025-10-11	Trichy	Cash on Delivery	1500	7500	3000
+O0439	C100	Keerthana	Laptop	Electronics	3	55000	2025-07-31	Bengaluru	Net Banking	42000	165000	39000
+O0440	C044	Divya	Jeans	Fashion	5	1800	2025-09-24	Salem	Credit Card	1100	9000	3500
+O0441	C069	Arun	Keyboard	Electronics	3	1800	2025-06-04	Pondicherry	Credit Card	1100	5400	2100
+O0442	C071	Vijay	Headphones	Electronics	2	2500	2025-08-11	Salem	Debit Card	1500	5000	2000
+O0443	C065	Karthik	Bedsheet	Home & Kitchen	1	1200	2025-07-04	Coimbatore	Cash on Delivery	700	1200	500
+O0444	C035	Suresh	T-Shirt	Fashion	4	800	2025-02-24	Madurai	UPI	450	3200	1400
+O0445	C098	Deepa	Coffee Maker	Home & Kitchen	3	4500	2025-11-14	Trichy	Cash on Delivery	2900	13500	4800
+O0446	C035	Suresh	Backpack	Fashion	4	1500	2025-11-30	Madurai	Debit Card	900	6000	2400
+O0447	C046	Anitha	T-Shirt	Fashion	4	800	2025-06-10	Salem	Debit Card	450	3200	1400
+O0448	C063	Harini	Hoodie	Fashion	4	2200	2025-10-22	Trichy	Cash on Delivery	1400	8800	3200
+O0449	C030	Swetha	Shoes	Fashion	4	3000	2025-07-06	Coimbatore	Net Banking	1900	12000	4400
+O0450	C141	Priya	Water Bottle	Home & Kitchen	2	700	2025-12-16	Chennai	Cash on Delivery	350	1400	700
+O0451	C018	Deepa	T-Shirt	Fashion	4	800	2025-05-30	Salem	Cash on Delivery	450	3200	1400
+O0452	C065	Karthik	Keyboard	Electronics	3	1800	2025-05-04	Hyderabad	Cash on Delivery	1100	5400	2100
+O0453	C123	Harini	Coffee Maker	Home & Kitchen	1	4500	2025-08-18	Salem	Net Banking	2900	4500	1600
+O0454	C010	Swetha	Desk Lamp	Home & Kitchen	4	1000	2025-10-06	Trichy	Net Banking	600	4000	1600
+O0455	C091	Vijay	Headphones	Electronics	1	2500	2025-05-08	Hyderabad	Net Banking	1500	2500	1000
+O0456	C103	Harini	Mobile	Electronics	5	22000	2025-11-27	Trichy	Cash on Delivery	17000	110000	25000
+O0457	C067	Rahul	Smart Watch	Electronics	1	5000	2025-02-20	Coimbatore	Net Banking	3200	5000	1800
+O0458	C148	Meena	Desk Lamp	Home & Kitchen	5	1000	2025-10-25	Coimbatore	Cash on Delivery	600	5000	2000
+O0459	C129	Arun	Saree	Fashion	4	2500	2025-08-26	Hyderabad	Debit Card	1600	10000	3600
+O0460	C076	Pooja	Laptop	Electronics	4	55000	2025-02-23	Salem	UPI	42000	220000	52000
+O0461	C080	Keerthana	Smart Watch	Electronics	2	5000	2025-06-28	Trichy	Cash on Delivery	3200	10000	3600
+O0462	C090	Swetha	T-Shirt	Fashion	5	800	2025-09-05	Pondicherry	UPI	450	4000	1750
+O0463	C018	Deepa	Cookware Set	Home & Kitchen	4	2800	2025-06-13	Madurai	UPI	1800	11200	4000
+O0464	C028	Meena	Smart Watch	Electronics	1	5000	2025-06-25	Hyderabad	Credit Card	3200	5000	1800
+O0465	C041	Priya	Desk Lamp	Home & Kitchen	2	1000	2025-10-10	Trichy	Net Banking	600	2000	800
+O0466	C104	Divya	Mixer Grinder	Home & Kitchen	4	3500	2025-04-29	Hyderabad	Credit Card	2300	14000	4800
+O0467	C051	Vijay	Mixer Grinder	Home & Kitchen	4	3500	2025-01-15	Pondicherry	Net Banking	2300	14000	4800
+O0468	C055	Suresh	Mixer Grinder	Home & Kitchen	4	3500	2025-01-03	Coimbatore	Debit Card	2300	14000	4800
+O0469	C138	Deepa	Headphones	Electronics	5	2500	2025-02-22	Hyderabad	Debit Card	1500	12500	5000
+O0470	C030	Swetha	Backpack	Fashion	2	1500	2025-08-23	Madurai	Cash on Delivery	900	3000	1200
+O0471	C100	Keerthana	Desk Lamp	Home & Kitchen	3	1000	2025-11-02	Salem	Net Banking	600	3000	1200
+O0472	C118	Deepa	Smart Watch	Electronics	3	5000	2025-06-30	Hyderabad	Debit Card	3200	15000	5400
+O0473	C031	Vijay	Headphones	Electronics	2	2500	2025-06-10	Coimbatore	Debit Card	1500	5000	2000
+O0474	C037	Ajay	Smart Watch	Electronics	2	5000	2025-07-11	Salem	Cash on Delivery	3200	10000	3600
+O0475	C109	Arun	Keyboard	Electronics	5	1800	2025-07-16	Hyderabad	Cash on Delivery	1100	9000	3500
+O0476	C043	Harini	Water Bottle	Home & Kitchen	2	700	2025-10-12	Pondicherry	Debit Card	350	1400	700
+O0477	C116	Pooja	Keyboard	Electronics	2	1800	2025-06-11	Chennai	Debit Card	1100	3600	1400
+O0478	C050	Swetha	Laptop	Electronics	4	55000	2025-03-11	Salem	Net Banking	42000	220000	52000
+O0479	C126	Anitha	Desk Lamp	Home & Kitchen	4	1000	2025-07-29	Salem	Cash on Delivery	600	4000	1600
+O0480	C145	Karthik	Bedsheet	Home & Kitchen	2	1200	2025-02-12	Chennai	Credit Card	700	2400	1000
+O0481	C058	Deepa	Hoodie	Fashion	1	2200	2025-05-21	Madurai	Credit Card	1400	2200	800
+O0482	C141	Priya	Cookware Set	Home & Kitchen	5	2800	2025-09-11	Bengaluru	Net Banking	1800	14000	5000
+O0483	C094	Kavya	Smart Watch	Electronics	3	5000	2025-10-06	Chennai	Cash on Delivery	3200	15000	5400
+O0484	C027	Rahul	Water Bottle	Home & Kitchen	2	700	2025-08-06	Coimbatore	Debit Card	350	1400	700
+O0485	C090	Swetha	Mobile	Electronics	4	22000	2025-05-15	Bengaluru	Cash on Delivery	17000	88000	20000
+O0486	C090	Swetha	Smart Watch	Electronics	2	5000	2025-04-18	Salem	Credit Card	3200	10000	3600
+O0487	C016	Pooja	Keyboard	Electronics	2	1800	2025-04-16	Trichy	Net Banking	1100	3600	1400
+O0488	C044	Divya	Shoes	Fashion	5	3000	2025-10-03	Trichy	Debit Card	1900	15000	5500
+O0489	C132	Nisha	Hoodie	Fashion	5	2200	2025-05-17	Bengaluru	Credit Card	1400	11000	4000
+O0490	C033	Ravi	Mixer Grinder	Home & Kitchen	1	3500	2025-05-22	Hyderabad	Credit Card	2300	3500	1200
+O0491	C101	Priya	Keyboard	Electronics	3	1800	2025-05-07	Pondicherry	Credit Card	1100	5400	2100
+O0492	C116	Pooja	Shoes	Fashion	4	3000	2025-07-12	Bengaluru	UPI	1900	12000	4400
+O0493	C095	Suresh	Coffee Maker	Home & Kitchen	5	4500	2025-05-23	Pondicherry	Cash on Delivery	2900	22500	8000
+O0494	C024	Divya	Backpack	Fashion	5	1500	2025-01-02	Pondicherry	Debit Card	900	7500	3000
+O0495	C056	Pooja	Headphones	Electronics	5	2500	2025-07-23	Salem	Credit Card	1500	12500	5000
+O0496	C073	Ravi	Bedsheet	Home & Kitchen	3	1200	2025-06-15	Trichy	Net Banking	700	3600	1500
+O0497	C088	Meena	Keyboard	Electronics	5	1800	2025-09-06	Chennai	UPI	1100	9000	3500
+O0498	C032	Nisha	Smart Watch	Electronics	4	5000	2025-01-09	Hyderabad	Cash on Delivery	3200	20000	7200
+O0499	C052	Nisha	Cookware Set	Home & Kitchen	1	2800	2025-08-08	Hyderabad	Debit Card	1800	2800	1000
+O0500	C093	Ravi	Mouse	Electronics	3	900	2025-02-17	Madurai	UPI	500	2700	1200
