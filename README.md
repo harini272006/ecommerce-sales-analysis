@@ -55,7 +55,7 @@ The SQL analysis contains **30 business-focused queries** covering:
 * Product and category analysis
 * Regional and monthly analysis
 
-📁 SQL file: `sql/ecommerce_analysis.sql`
+📁 [SQL Analysis](sql/ecommerce_analysis.sql)
 
 ## 📈 Excel Analysis
 
