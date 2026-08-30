@@ -1,56 +1,107 @@
-🛒 E-Commerce Sales Analysis
+# 🛒 E-Commerce Sales Analysis
 
-📌 Project Overview
+## 📌 Project Overview
 
-This project analyzes e-commerce sales data to understand revenue, profit, customer spending, product performance, category performance, and monthly sales trends.
+This project analyzes 500 e-commerce orders to understand revenue, profit, customer spending, product performance, category performance, regional performance, payment preferences, and monthly sales trends.
 
-🎯 Objectives
+The project combines **Microsoft Excel, MySQL, and SQL analysis**, with a Power BI dashboard planned as the next stage.
 
-- Analyze total revenue and profit
-- Identify best-selling products
-- Compare category performance
-- Analyze customer spending
-- Identify monthly sales trends
-- Generate useful business insights
+## 🎯 Objectives
 
-🛠️ Tools & Technologies
+* Analyze total revenue and profit
+* Identify best-selling and high-revenue products
+* Compare category performance
+* Analyze customer spending and order behavior
+* Identify monthly sales trends
+* Analyze regional performance
+* Analyze payment-method performance
+* Generate actionable business insights
 
-- Excel
-- SQL
-- Python
-- Power BI
+## 🛠️ Tools & Technologies
 
-📊 Key Analysis
+* Microsoft Excel
+* MySQL
+* MySQL Workbench
+* SQL
+* Power BI *(next stage)*
+* Python *(planned)*
 
-1. Sales & Profit Analysis
+## 📊 Key KPIs
 
-Analyze total sales, revenue, and profit.
+| KPI                 |      Value |
+| ------------------- | ---------: |
+| Total Revenue       | ₹84,88,700 |
+| Total Profit        | ₹24,03,200 |
+| Total Orders        |        500 |
+| Average Order Value | ₹16,977.40 |
+| Profit Margin       |     28.31% |
 
-2. Product Analysis
+## 🗄️ SQL Analysis
 
-Identify the best-selling and most profitable products.
+The SQL analysis contains **30 business-focused queries** covering:
 
-3. Category Analysis
+* Aggregations and filtering
+* `GROUP BY` and `HAVING`
+* `INNER JOIN` and `LEFT JOIN`
+* CTEs
+* Subqueries
+* `CASE WHEN`
+* `RANK()`
+* `ROW_NUMBER()`
+* `LAG()` and `LEAD()`
+* Running totals
+* Moving averages
+* Customer-level analysis
+* Product and category analysis
+* Regional and monthly analysis
 
-Compare sales and profit across different product categories.
+📁 SQL file: `sql/ecommerce_analysis.sql`
 
-4. Customer Analysis
+## 📈 Excel Analysis
 
-Identify high-value customers based on their spending.
+Excel was used for:
 
-5. Monthly Sales Trends
+* Data analysis
+* Excel formulas
+* PivotTables
+* PivotCharts
+* Dashboard creation
+* KPI calculation
 
-Analyze how sales change over time.
+The Excel analysis identified key business trends and supported the SQL results.
 
-📈 Dashboard
+## 🔍 Key Insights
 
-Power BI dashboard will be added here.
+* **Electronics** generated the highest revenue: ₹63,82,400.
+* **Electronics** was also the most profitable category: ₹16,16,600.
+* **Laptop** generated the highest product revenue: ₹36,85,000.
+* **May 2025** recorded the highest monthly revenue: ₹13,91,200.
+* **Salem** generated the highest regional revenue: ₹15,92,200.
+* **Harini** was the highest-spending customer with ₹7,59,900 in revenue.
+* **Swetha** placed the highest number of orders with 31 orders.
+* **UPI** generated the highest revenue among payment methods: ₹21,68,800.
+* **Backpack** was the best-selling product by units, with 79 units sold.
 
-💡 Key Insights
+## 💡 Business Recommendations
 
-Insights will be added after completing the analysis.
+* Focus on high-performing Electronics products.
+* Investigate the reasons behind the May sales peak.
+* Study customer behavior in Salem to identify successful sales strategies.
+* Analyze payment-method preferences.
+* Continue promoting high-revenue products such as Laptop and Mobile.
+* Investigate high-volume products such as Backpack to understand customer demand.
 
-👩‍💻 Author
+## 📊 Dashboard
 
-Harini C
+The Excel dashboard provides a visual overview of sales performance using KPI cards, charts, PivotTables, and PivotCharts.
+
+**Power BI dashboard — coming next.**
+
+## 🎯 Conclusion
+
+This project demonstrates practical data analytics skills including Excel analysis, SQL querying, data aggregation, joins, CTEs, subqueries, window functions, business KPI analysis, trend identification, and communicating actionable insights.
+
+## 👩‍💻 Author
+
+**Harini C**
 Aspiring Data Analyst
