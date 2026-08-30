@@ -45,4 +45,4 @@ The Excel dashboard provides a visual overview of sales performance using KPI ca
 
 This project demonstrates my ability to clean and analyze data, calculate business KPIs, use PivotTables and PivotCharts, identify trends, and communicate business insights using Excel.
 
-![E-Commerce Sales Dashboard](Dashboard.png.jpeg)
+![E-Commerce Sales Dashboard](dashboard.png.jpeg)
