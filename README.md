@@ -76,6 +76,10 @@ The Excel analysis identified key business trends and supported the SQL results.
 
 📁 [Excel Dataset](./excel/ecommerce_sales_500_rows.xlsx)
 
+## 📈 Excel Dashboard
+
+![E-Commerce Sales Dashboard](./excel/dashboard.png.jpeg)
+
 ## 🔍 Key Insights
 
 * **Electronics** generated the highest revenue: ₹63,82,400.
